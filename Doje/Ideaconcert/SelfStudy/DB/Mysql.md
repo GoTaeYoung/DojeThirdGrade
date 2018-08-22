@@ -25,36 +25,12 @@
 
     * 정의 : 조건절의 데이터 타입이 서로 다를 때, 우선순위가 높은 쪽으로 형 변환이 내부에서 되는 것을 말한다
 
-    * 예제 : 문자열과 정수형을 비교하면, 우선순위가 낮은 문자열은 자동으로 정수형으로 형 변환 처리 된다
+* 클러스터 인덱스(Cluster Index) [&#128209;](http://mee2ro.tistory.com/2)
 
-      ~~~mysql
-      create table test(
-      inti int unsigned not null auto_increment,
-      intj int unsigned not null,
-      str varchar(64) not null,
-      d datetime not null,
-      primary key(inti)
-      );
-      
-      alter table test add key(intj), add key(str), add key(d);
-      
-      insert into test(intj, str, d)
-      values(
-      	crc32(rand()),
-          crc32(rand()*12345),
-          date_add(now(), interval -crc32(rand())/5 second)
-      );
-      
-      INSERT INTO test(intj, str,d)
-      SELECT
-      	crc32(rand()),
-          crc32(rand())*12345,
-          date_add(now(), interval -crc32(rand())/5 second)
-      FROM test;
-      ~~~
+	* 정의 : 테이블 마다 한개만 가질 수 있고, 지정한 열의 행이 자동 정렬 된다
 
-      * 위 코드를 17번 실행하면 약 13만 row가 insert 된다
+	* 임의의 열에 PRIMARY KEY 를 지정하면 해당 열에 클러스터 인덱스가 생성된다
 
-* 용어 찾아보기
+	* 강제로 PRIMARY KEY 를 비클러스터 인덱스로 선언 할 수 있다
 
-  * 클러스터 인덱스(Cluster Index)  [&#128209;](http://mee2ro.tistory.com/2)
+	* 많은 데이터가 있는 테이블에 클러스터 인덱스를 지정하면, 데이터가 바뀔 때마다 자동 정렬을 실행하기에 많은 리소스를 차지하게 된다
