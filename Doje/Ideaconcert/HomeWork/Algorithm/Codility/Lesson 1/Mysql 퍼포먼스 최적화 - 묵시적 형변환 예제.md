@@ -1,12 +1,15 @@
-# intj를 문자열로 검색했을 때
+﻿# intj를 문자열로 검색했을 때
 
 `explain
+
 select * from test
+
 where intj = '2839990793';`
 
 실행결과 : 성공
 
 id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra
+
 '1', 'SIMPLE', 'test', NULL, 'ref', 'intj', 'intj', '4', 'const', '1', '100.00', NULL
 
 이유 : 묵시적 형변환으로 인해서 문자열이 정수형으로 변환됐기 때문
@@ -16,12 +19,15 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # intj를 정수형으로 검색했을 때
 
 `explain
+
 select * from test
+
 where intj = 2839990793;`
 
 실행결과 : 성공
 
 id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra
+
 '1', 'SIMPLE', 'test', NULL, 'ref', 'intj', 'intj', '4', 'const', '1', '100.00', NULL
 
 이유 : 컬럼 타입이 조건문과 일치했기 때문
@@ -31,12 +37,15 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # str을 정수형으로 검색했을 때
 
 `explain
+
 select * from test
+
 where str = 46829860833270;`
 
 실행결과 : 성공
 
 id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra
+
 '1', 'SIMPLE', 'test', NULL, 'ALL', 'str', NULL, NULL, NULL, '131594', '10.00', 'Using where'
 
 이유 : 묵시적 형변환으로 인해 문자열이 정수형으로 변환되어 검색된다
@@ -48,12 +57,15 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # str을 문자열로 검색했을 때
 
 `explain
+
 select * from test
+
 where str = '46829860833270';`
 
 실행결과 : 성공
 
 id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra
+
 '1', 'SIMPLE', 'test', NULL, 'ref', 'str', 'str', '194', 'const', '1', '100.00', NULL
 
 이유 : 컬럼 타입이 조건문과 일치했기 때문
