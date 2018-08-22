@@ -1,7 +1,9 @@
 ﻿# intj를 문자열로 검색했을 때
 
 `explain`
+
 `select * from test`
+
 `where intj = '2839990793';`
 
 실행결과 : 성공
@@ -17,7 +19,9 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # intj를 정수형으로 검색했을 때
 
 `explain`
+
 `select * from test`
+
 `where intj = 2839990793;`
 
 실행결과 : 성공
@@ -33,7 +37,9 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # str을 정수형으로 검색했을 때
 
 `explain`
+
 `select * from test`
+
 `where str = 46829860833270;`
 
 실행결과 : 성공
@@ -51,7 +57,9 @@ id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows
 # str을 문자열로 검색했을 때
 
 `explain`
+
 `select * from test`
+
 `where str = '46829860833270';`
 
 실행결과 : 성공
