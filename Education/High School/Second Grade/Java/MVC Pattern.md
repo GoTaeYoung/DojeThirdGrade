@@ -1,4 +1,4 @@
-# MVC 패턴 [&#128209;](https://m.blog.naver.com/jhc9639/220967034588)
+# MVC Pattern[&#128209;](https://m.blog.naver.com/jhc9639/220967034588)
 
 
 - ## Model View Controller
