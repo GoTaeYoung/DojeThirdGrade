@@ -1,7 +1,3 @@
-# DBGuide
-
------
-
 # DA 가이드
 - ## 데이터 표준화
   - ### 데이터 표준화 개요
@@ -16,23 +12,35 @@
 
   - ### 데이터 표준 관리
     - #### 데이터 표준 관리 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12870&boardConfigUid=9&categoryUid=216&boardIdx=45&boardStep=1)<br/>개별적인 데이터 표준화 요소의 표준화 작업 이후, 데이터 표준 정의 단계에서 수립된<br/>데이터 표준에 근거하여 관리 프로세스를 정립하고 데이터 표준이 관리되게 한다
-    - #### 데이터 표준 관리 프로세스 [:bookmark_tabs:]()<br/>
+    - #### 데이터 표준 관리 프로세스 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12871&boardConfigUid=9&categoryUid=216&boardIdx=45&boardStep=1)<br/>전사적 차원의 일관된 데이터 형식 및 규칙의 적용으로 데이터 품질의 향상<br/>데이터 표준의 관리 프로세스를 정의함으로써 데이터 표준을 지속적으로 유지 가능<br/>![](http://www.dbguide.net/publishing/img/dbguide/edu/070307_edu_01.gif)
+
+-----
 
 - ## 데이터 모델링
   - ### 데이터 모델링 이해
-    - #### 데이터 모델링 개요 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12733&boardConfigUid=9&categoryUid=216&boardIdx=31&boardStep=1)<br/>
-    - #### 데이터 모델링 기법 이해 [:bookmark_tabs:]()<br/>
-    - #### 데이터 모델링 표기법 이해 [:bookmark_tabs:]()<br/>
+    - #### 데이터 모델링 개요 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12733&boardConfigUid=9&categoryUid=216&boardIdx=31&boardStep=1)<br/>현실 세계의 기업 업무에서 발생하는 데이터에 대하여<br/>물리적인 데이터베이스화 하기 위해 이루어지는 과정 중의 하나<br/>![](http://www.dbguide.net/publishing/img/dbguide/edu/070321_gu_2.gif)
+
+    - #### 데이터 모델링 기법 이해 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12843&boardConfigUid=9&categoryUid=216&boardIdx=31&boardStep=1)<br/>
+
+    - #### 데이터 모델링 표기법 이해 [:bookmark_tabs:](http://www.dbguide.net/db.db?cmd=view&boardUid=12845&boardConfigUid=9&categoryUid=216&boardIdx=31&boardStep=1)<br/>
+  - ### 개념 데이터 모델링 [:bookmark_tabs:]()<br/>
+  - ### 논리 데이터 모델링 [:bookmark_tabs:]()<br/>
+  - ### 물리 데이터 모델링 [:bookmark_tabs:]()<br/>
+
+-----
+
+
+
 -----
 
 # 용어 찾기
 
-- ### 전사적<br/>기업 전체란 의미
+- ### ~~전사적~~<br/>기업 전체란 의미
 
 - ### 도메인<br/>
 
 - ### 특수 데이터 타입( CLOB, Long Raw )<br/>
 
-- ### 표준 코드<br/>001 : 빨강, 002 : 파랑   처럼 미리 정의된 코드. 공통된 정보를 간략하게 표현하기 위해 만든 코드
+- ### ~~표준 코드~~<br/>001 : 빨강, 002 : 파랑   처럼 미리 정의된 코드. 공통된 정보를 간략하게 표현하기 위해 만든 코드
 
 - ### 정합성<br/>
